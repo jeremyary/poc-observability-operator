@@ -61,12 +61,3 @@ func GetGrafanaCr(cr *v1.Observability) *v1alpha12.Grafana {
 		},
 	}
 }
-
-func GetGrafanaDatasource(cr *v1.Observability) *v1alpha12.GrafanaDataSource {
-	return &v1alpha12.GrafanaDataSource{
-		ObjectMeta: v12.ObjectMeta{
-			Name:      "on-cluster-prometheus",
-			Namespace: cr.Namespace,
-		},
-	}
-}
